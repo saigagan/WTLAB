@@ -1,0 +1,11 @@
+<!ELEMENT Document (Customer)>
+<!ELEMENT Customer (name,Date,orders)>
+<!ELEMENT name (FN,LN)>
+<!ELEMENT FN (#PCDATA)>
+<!ELEMENT LN (#PCDATA)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT orders (item)>
+<!ELEMENT item (Product,number,price)>
+<!ELEMENT Product (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT price (#PCDATA)>

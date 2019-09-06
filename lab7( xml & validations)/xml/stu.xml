@@ -1,0 +1,13 @@
+<?xml version ="1.0" encoding ="UTF-8"?>
+<student_details>
+    <student id="1">
+        <hno>111</hno>
+        <name>steffy</name>
+        <marks>100</marks>
+    </student>
+    <student id="2">
+        <hno>222</hno>
+        <name>saju</name>
+        <marks>100</marks>
+    </student>
+</student_details>

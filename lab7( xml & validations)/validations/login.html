@@ -1,0 +1,74 @@
+<HTML>
+
+<HEAD>
+    <TITLE> Validation of user login page </TITLE>
+</HEAD>
+<script>
+    functionformValidator()
+    {
+        var username = document.getElementById('uname').value;
+        var password = document.getElementById('pwd').value;
+        if (isEmpty(username) && isEmpty(password)) {
+            alert("Enter something");
+            document.form1.uname.focus();
+        }
+        if (!isEmpty(username) && !isEmpty(password) && isAlphabet(username)) {
+            return true;
+        }
+        else {
+            alert("please enter alphabet for username");
+            document.form1.uname.focus();
+        }
+        return false;
+    }
+    functionisEmpty(elem)
+    {
+        if (elem.length == 0) {
+            return true;
+        }
+        return false;
+    }
+    functionisAlphabet(elem)
+    {
+        varalphaExp = /^[a-z A-Z]+$/;
+        if (elem.match(alphaExp)) {
+            return true;
+        }
+        return false;
+    }
+</script>
+
+<BODY>
+    <form name="form1" onSubmit="return formValidator()">
+        <h1 align=center> user login page</h1>
+        <br>
+        <br>
+        <center>
+            <table cellspacing=4 border=0>
+                <tr>
+                    <td>username:</td>
+                    <td>
+                        <input type="text" value="" name="username" id="uname">
+                    </td>
+                    <br>
+                    <br>
+                </tr>
+                <tr>
+                    <td>password:</td>
+                    <td>
+                        <input type="password" value="" name="password" id="pwd">
+                    </td>
+                    <br>
+                    <br>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="submit" name="submit">
+                        <td>
+                            <input type="button" value="cancel" name="cancel">
+                </tr>
+            </table>
+        </center>
+</BODY>
+
+</HTML>

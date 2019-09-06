@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>XML Demo</title>
+
+        <script type="text/javascript">
+            var a;
+            var XMLDOC = new ActiveXObject("Microsoft.XMLDOM");
+            XMLDOC.async = "false";
+            XMLDOC.load("stu.xml");
+            document.write("The root element is:");
+            document.write(XMLDOC.documentElement.nodeName + "</br>");
+            var l = XMLDOC.documentElement.childNodes.length;
+            document.write("number of student" + l);
+            var id = prompt("enter student id", "0");
+            for (var i = 0; i < l; i++) {
+                var a = XMLDOC.documentElement.childNodes[i].childNodes.length;
+                for (var j = 0; j < a; j++) {
+                    if (XMLDOC.documentElement.childNodes[i].attributes.getNamedItem("id").text == id) {
+                        document.write(XMLDOC.documentElement.childNodes[i].childNodes[j].nodeName + "</br>");
+                        document.write(XMLDOC.documentElement.childNodes[i].childNodes[j].text + "</br>");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

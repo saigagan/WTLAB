@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE Document SYSTEM "c.dtd">
+<Document>
+    <Customer>
+        <name>
+            <FN>A</FN>
+            <LN>B</LN>
+        </name>
+        <Date>Jan 16,2017</Date>
+        <orders>
+            <item>
+                <Product>phone</Product>
+                <number>1</number>
+                <price>$10</price>
+            </item>
+        </orders>
+    </Customer>
+</Document>

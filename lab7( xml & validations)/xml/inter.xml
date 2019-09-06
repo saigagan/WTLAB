@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Document [
+<!ELEMENT Document (Customer)>
+<!ELEMENT Customer (name,Date,orders)>
+<!ELEMENT name (FN,LN)>
+<!ELEMENT FN (#PCDATA)>
+<!ELEMENT LN (#PCDATA)>
+<!ELEMENT Date (#PCDATA)>
+<!ELEMENT orders (item)>
+<!ELEMENT item (Product,number,price)>
+<!ELEMENT Product (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+]
+>
+<Document>
+    <Customer>
+        <name>
+            <FN>A</FN>
+            <LN>B</LN>
+        </name>
+        <Date>Jan 16,2017</Date>
+        <orders>
+            <item>
+                <Product>phone</Product>
+                <number>1</number>
+                <price>$10</price>
+            </item>
+        </orders>
+    </Customer>
+</Document>

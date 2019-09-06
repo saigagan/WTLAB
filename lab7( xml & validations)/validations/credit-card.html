@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title> credit card validation</title>
+    </head>
+    <script>
+        function formValidator()
+        {
+            var name = document.getElementById('txt1');
+            var creditcardno = document.getElementById('txt2');
+            var accountno = document.getElementById('txt3');
+            var addr = document.getElementById('add');
+            var bank = document.getElementById('txt4');
+            var mobileno = document.getElementById('txt5')
+            if (isAlphabet(name, "Name: Please enter any alphabet") && isNumeric(creditcardno, "Credit Card: Enter numbers only") && isNumeric(accountno, "Account No: Enter numbers only")
+                && isAlphanumeric(addr, "Address can have alphabet &number") && isAlphabet(bank, "Bank: Please enter any alphabet") && isNumeric(mobileno, "Mobile: Enter numbers only")) {
+                
+                return true
+            }
+            
+            return false
+        }
+        function isAlphabet(elem, helpmsg)
+        {
+            var alphaExp = /^[a-zA-Z]+$/;
+            if (elem.value.match(alphaExp)) {
+                return true;
+            }
+            else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+        function isAlphanumeric(elem, helpmsg)
+        {
+            var alphaNumExp = /^[0-9a-zA-Z]+$/;
+            if (elem.value.match(alphaNumExp)) {
+                return true;
+            }
+            else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+        function isNumeric(elem, helpmsg)
+        {
+            var numExp = /^\d+$/;
+            if (elem.match(numExp)) {
+                return true;
+            }
+            else {
+                alert(helpmsg);
+                elem.focus();
+                return false;
+            }
+        }
+    </script>
+
+    <body>
+        <form name="form3" onSubmit="return formValidator()">
+            <h1 align=center> Credit Card</h1>
+            <br>
+            <br>
+            <center>
+                name :<input type="text" value="" id="txt1"><br><br> 
+                credit card no :<input type="text" value="" id="txt2"><br><br>
+                account no:<input type="text" value="" id="txt3"><br><br> 
+                address:<input type="text" value="" id="add"><br><br>
+                bank:<input type="text" value="" id="txt4"><br><br>
+                mobile no:<input type="text" value="" id="txt5"><br><br>
+                <input type="submit" value="submit" name="btn1">
+                <input type="button" value="cancel" name="btn2">
+            </center>
+        </form>
+    </body>
+</html>
