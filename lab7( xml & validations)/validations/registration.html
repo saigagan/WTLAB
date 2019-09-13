@@ -7,7 +7,7 @@
     functionformValidator()
     {
         var name = document.getElementById('txt1');
-        varaddr = document.getElementById('addre');
+        var addr = document.getElementById('addre');
         var phone = document.getElementById('txt2');
         var email = document.getElementById('txt3');
         if (isAlphabet(name, "please enter any alphabet")) {
@@ -22,9 +22,9 @@
             }
             return false;
         }
-        functionisAlphabet(elem, helpmsg)
+        function isAlphabet(elem, helpmsg)
         {
-            varalphaExp = /^[a-zA-Z]+$/;
+            var alphaExp = /^[a-zA-Z]+$/;
             if (elem.value.match(alphaExp)) {
                 return true;
             }
@@ -34,9 +34,9 @@
                 return false;
             }
         }
-        functionisAlphanumeric(elem, helpmsg)
+        function isAlphanumeric(elem, helpmsg)
         {
-            varalphaNumExp = /^[0-9 a-z A-Z]+$/;
+            var alphaNumExp = /^[0-9 a-z A-Z]+$/;
             if (elem.value.match(alphaNumExp)) {
                 return true;
             }
@@ -46,9 +46,9 @@
                 return false;
             }
         }
-        functionisNumeric(elem, helpmsg)
+        function isNumeric(elem, helpmsg)
         {
-            varnumExp = /^[0-9]+$/;
+            var numExp = /^[0-9]+$/;
             if (elem.value.match(numExp)) {
                 return true;
             }
@@ -58,9 +58,9 @@
                 return false;
             }
         }
-        functionemailValidator(elem, helpmsg)
+        function emailValidator(elem, helpmsg)
         {
-            varemailExp = /^[\w\_\.\+]+\@[a-z A-Z 0-9\.\]+\.[a-z A-Z 0-9]{2,4}$/;
+            var emailExp = /^[\w\_\.\+]+\@[a-z A-Z 0-9\.\]+\.[a-z A-Z 0-9]{2,4}$/;
             if (elem.value.match(emailExp)) {
                 return true;
             }

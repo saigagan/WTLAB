@@ -1,0 +1,16 @@
+SQL> select * from account;
+
+     ACCNOACCNAME            BALANCE                                      
+---------------------------            ----------                                      
+         1 gagan                      50000                                      
+         2 charan                     70000.25                                      
+         3 dheeraj                    80000                                      
+         4  hemanth                  50000                                      
+         5  bhargav                   40000                                      
+         6  hithesh                     40000                                      
+         7  Rishi                        90000                                       
+         8  sai                           99999                                      
+
+8 rows selected.
+
+SQL> spool off;
